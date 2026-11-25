@@ -1,0 +1,290 @@
+<title>Guía del Consumidor Formosa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Concepto: sitio institucional liviano, blanco y azul del logo de la Subsecretaría; cabecera con logo, contenido en tarjetas simples, pie con CEDETEC en texto */
+:root{
+  --bg:#FFFFFF; --surface:#F2F7FC; --ink:#0B2545; --muted:#46586F; --line:#D3E1F0;
+  --brand:#003B73; --brand-2:#0070AE; --accent:#0070AE; --on-brand:#FFFFFF; --soft:#DCE8F8;
+  --ok:#1B7F4B; --ok-bg:#E3F4EA; --bad:#B3261E; --bad-bg:#FBE8E6;
+  --font-display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --font-body:'Public Sans',Arial,Helvetica,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#071A2E; --surface:#0D2640; --ink:#EAF2FB; --muted:#A5B8CC; --line:#1F3C5C;
+  --brand:#0A4C8C; --brand-2:#1478BE; --accent:#7CC0F2; --on-brand:#FFFFFF; --soft:#16406A;
+  --ok:#6FD79C; --ok-bg:#12372A; --bad:#FF9A92; --bad-bg:#40191A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#071A2E; --surface:#0D2640; --ink:#EAF2FB; --muted:#A5B8CC; --line:#1F3C5C;
+  --brand:#0A4C8C; --brand-2:#1478BE; --accent:#7CC0F2; --on-brand:#FFFFFF; --soft:#16406A;
+  --ok:#6FD79C; --ok-bg:#12372A; --bad:#FF9A92; --bad-bg:#40191A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:.2px}
+h1{font-size:clamp(2.3rem,6vw,3.6rem)} h2{font-size:clamp(1.8rem,4vw,2.4rem)} h3{font-size:1.45rem}
+p{margin:0}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px;border-radius:6px}
+header.top{display:flex;align-items:center;gap:14px;padding-block:14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header.top img{width:56px;height:55px;border-radius:10px;display:block}
+header.top .t{display:flex;flex-direction:column;min-width:0;flex:1}
+header.top .t b{font-family:var(--font-display);font-size:1.35rem;line-height:1.1;color:var(--ink)}
+header.top .t span{font-size:.85rem;color:var(--muted)}
+.crumbs{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:600;text-decoration:none}
+.chip{text-transform:capitalize}
+.chip[aria-current="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+main{padding-block:28px 40px}
+.hero{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:var(--on-brand);border-radius:20px;padding:36px clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:14px}
+.hero p{max-width:60ch;font-size:1.1rem}
+.hero .tag{font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+a.card,button.card{text-decoration:none;color:inherit;text-align:left}
+a.card:hover,button.card:hover{border-color:var(--brand-2)}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--brand);color:var(--on-brand);display:grid;place-items:center;font-family:var(--font-display);font-size:1.5rem;font-weight:700}
+.card p{color:var(--muted);font-size:.97rem}
+.card .go{margin-top:auto;font-weight:700;color:var(--accent)}
+.sec{margin-top:36px;display:flex;flex-direction:column;gap:6px}
+.sec>p{color:var(--muted)}
+.caplist{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.meta{display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);flex-wrap:wrap}
+.done{background:var(--ok-bg);color:var(--ok);border-radius:999px;padding:2px 10px;font-weight:700;font-size:.8rem}
+.btn{background:var(--brand);color:var(--on-brand);border:0;border-radius:12px;padding:12px 20px;font-weight:700;display:inline-block;text-decoration:none}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--brand-2)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.video{aspect-ratio:16/9;max-width:100%;border-radius:18px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:var(--on-brand);display:grid;place-items:center;text-align:center;padding:20px;position:relative;overflow:hidden}
+.video svg{position:absolute;inset:0;width:100%;height:100%;opacity:.18}
+.video .in{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px}
+.play{width:68px;height:68px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.play i{border-left:22px solid var(--brand);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.video small{opacity:.9}
+.pts{display:grid;gap:12px;margin-top:20px;padding:0;list-style:none}
+.pts li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start}
+.pts .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand);color:var(--on-brand);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.law{font-size:.9rem;color:var(--muted);margin-top:10px}
+.quiz{margin-top:30px;border:2px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.prog{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--brand-2);transition:width .3s}
+.opts{display:grid;gap:10px}
+.opt{background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:12px 16px;text-align:left;font-weight:600}
+.opt:hover:not([disabled]){border-color:var(--brand-2)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.opt[disabled]{cursor:default}
+.fb{border-radius:12px;padding:12px 16px;background:var(--soft);font-size:.97rem}
+.scn{display:flex;flex-direction:column;gap:14px}
+.story{background:var(--surface);border-left:6px solid var(--brand-2);border-radius:12px;padding:16px 20px}
+.checks{display:grid;gap:8px}
+.chk{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--bg)}
+.chk input{width:22px;height:22px;margin-top:2px;flex:none}
+.chk.ok{border-color:var(--ok);background:var(--ok-bg)}
+.chk.bad{border-color:var(--bad);background:var(--bad-bg)}
+.score{font-family:var(--font-display);font-size:3rem;color:var(--accent);line-height:1}
+footer{border-top:1px solid var(--line);padding-block:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+footer .by{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+footer .by small{font-size:.8rem;color:var(--muted)}
+footer .brand{font-family:var(--font-body);font-weight:800;font-size:1rem;letter-spacing:4px;color:var(--ink)}
+.back{display:inline-block;margin-bottom:16px;font-weight:700}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <img src="data:image/jpeg;base64,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" alt="Logo de la Subsecretaría de Defensa del Consumidor y Usuario">
+  <div class="t"><b>Subsecretaría de Defensa del Consumidor y Usuario</b><span>Provincia de Formosa · Guía interactiva (versión de prueba)</span></div>
+  <nav class="crumbs" id="nav" aria-label="Perfiles"></nav>
+</header>
+<main id="app"></main>
+<footer>
+  <span>Contenido basado en la Guía práctica de inspección y procedimiento administrativo. Versión de prueba.</span>
+  <span class="by"><small>Desarrollado por</small><span class="brand">CEDETEC</span></span>
+</footer>
+</div>
+
+<script>
+var CAPS={
+precio:{t:'El precio de la góndola es el que se paga',min:2,law:'Ley 24.240, art. 4 · deber de información',
+ intro:'El comercio tiene que informar el precio de forma cierta, clara y visible. Si el cartel dice una cosa y la caja cobra otra, hay un problema.',
+ pts:['Todo producto debe tener su precio exhibido de forma clara y visible.','El precio informado tiene que ser el que se cobra en caja.','Una oferta debe indicar sus condiciones: no pueden ocultarse costos ni restricciones importantes.','Sacá una foto del cartel y guardá el ticket: son tu prueba.'],
+ quiz:[{q:'Un producto está a $10.000 en la góndola, pero en la caja quieren cobrarte $12.000. ¿Qué corresponde?',o:['Pagar los $12.000 sin decir nada','Pedir que se respete el precio exhibido y guardar la prueba','Dejar el producto y no reclamar nunca'],a:1,w:'El precio informado debe ser el que se cobra. Conviene fotografiar el cartel y conservar el ticket.'},
+ {q:'¿Qué debe informar un comercio sobre una promoción del 50 % de descuento?',o:['Nada, alcanza con el cartel grande','Sus condiciones y restricciones esenciales','Solo la fecha de inicio'],a:1,w:'Una oferta sin condiciones claras puede ser una infracción al deber de información.'},
+ {q:'¿Qué prueba te sirve más ante una diferencia de precios?',o:['Una foto del cartel y el ticket','Lo que recordás','Nada: no hace falta prueba'],a:0,w:'La foto y el ticket muestran el hecho concreto y ayudan a que el reclamo avance.'}]},
+oferta:{t:'Ofertas en redes: ¿se cumplen?',min:2,law:'Decreto 274/2019, art. 11 · publicidad engañosa',
+ intro:'Una publicación en redes también es publicidad. Si anuncia un precio o un descuento que después no se respeta, puede ser publicidad engañosa.',
+ pts:['La publicidad no puede inducir a error sobre el precio, la calidad o las condiciones de venta.','Pueden ser engañosos: descuentos que no se aplican, promociones incompletas o características que el producto no tiene.','Guardá una captura de pantalla con la fecha y el nombre del comercio.','Cada caso se analiza según las circunstancias y las pruebas reunidas.'],
+ quiz:[{q:'Un local publica en redes un producto a $20.000. En el local te dicen que ese precio no existe. ¿Qué puede ser?',o:['Publicidad engañosa','Una simple charla comercial','Algo que la ley no regula'],a:0,w:'Anunciar un precio que luego no se ofrece, sin informar condiciones, puede configurar publicidad engañosa.'},
+ {q:'¿Qué conviene guardar de una oferta publicada en redes?',o:['Una captura con fecha y datos del comercio','Nada, las redes no cuentan','Solo el nombre del producto'],a:0,w:'La captura documenta lo que se ofreció y cuándo.'}]},
+seguridad:{t:'Productos vencidos o inseguros',min:2,law:'Ley 24.240, art. 5 · salud y seguridad',
+ intro:'Los productos y servicios no pueden poner en riesgo tu salud ni tu integridad física cuando se usan de manera normal o previsible.',
+ pts:['No pueden venderse mercaderías vencidas o en mal estado.','Los envases deben estar en condiciones adecuadas.','Los artefactos eléctricos y los juguetes deben cumplir condiciones de seguridad.','Al denunciar, describí el riesgo concreto que viste.'],
+ quiz:[{q:'¿Cuál de estas situaciones puede ser una infracción al art. 5?',o:['Un producto vencido en la góndola, listo para vender','Un cartel de oferta con letra chica','Una fila larga en la caja'],a:0,w:'La mercadería vencida a la venta compromete la salud del consumidor.'},
+ {q:'¿Qué hay que describir al informar un producto riesgoso?',o:['El riesgo concreto que se observó','Solo que el local es malo','Nada, el inspector lo adivina'],a:0,w:'Describir hechos concretos permite el análisis posterior.'}]},
+despues:{t:'¿Qué pasa después de un acta?',min:3,law:'Ley 1480, arts. 4, 9 y 11',
+ intro:'Cuando se constata una posible infracción se labra un acta y se inicia un procedimiento con plazos y derecho de defensa.',
+ pts:['Se notifica al presunto infractor, que tiene 5 días hábiles para presentar descargo y ofrecer pruebas.','Las actuaciones forman un expediente con el acta, las fotos y la documentación.','Se produce la prueba, en un plazo general de 10 días hábiles.','El Área Legal emite su dictamen y la autoridad resuelve en 10 días hábiles.','No presentar descargo no implica reconocer la infracción.'],
+ quiz:[{q:'¿Cuántos días hábiles tiene el comercio para presentar su descargo?',o:['5 días hábiles','30 días corridos','No tiene derecho a descargo'],a:0,w:'El art. 4 de la Ley 1480 fija 5 días hábiles.'},
+ {q:'Si el comercio no presenta descargo, ¿se considera que reconoce la infracción?',o:['Sí, automáticamente','No, la falta de descargo no es un reconocimiento automático','Solo si es reincidente'],a:1,w:'La guía aclara que no hay reconocimiento automático.'},
+ {q:'¿En cuántos días hábiles debe dictarse la resolución definitiva una vez concluidas las diligencias?',o:['10 días hábiles','90 días','No hay plazo'],a:0,w:'El art. 11 de la Ley 1480 prevé 10 días hábiles.'}]},
+sanciones:{t:'Sanciones: cuáles son y cómo se gradúan',min:2,law:'Ley 24.240, arts. 47 y 49 · Ley 1480, art. 17',
+ intro:'La sanción se elige según las circunstancias del caso y debe ser razonable y proporcional.',
+ pts:['Apercibimiento.','Multa.','Decomiso de la mercadería objeto de la infracción.','Clausura del establecimiento o suspensión del servicio, hasta treinta días.','Se gradúan según el perjuicio al consumidor, la posición en el mercado, el beneficio obtenido, la intencionalidad, la gravedad de los riesgos y la reincidencia.'],
+ quiz:[{q:'¿Cuál NO figura entre las sanciones del art. 47?',o:['Apercibimiento','Multa','Pena de prisión'],a:2,w:'Las sanciones son apercibimiento, multa, decomiso y clausura o suspensión hasta treinta días.'},
+ {q:'¿Qué criterio se usa para graduar la sanción?',o:['La reincidencia y el perjuicio al consumidor, entre otros','El color del cartel','El día de la semana'],a:0,w:'El art. 49 y el art. 17 de la Ley 1480 enumeran estos criterios.'}]},
+exhibir:{t:'Cómo exhibir precios y ofertas',min:2,law:'Ley 24.240, art. 4 · para comerciantes',
+ intro:'Cumplir es simple: precio visible, oferta con condiciones y mismo valor en caja.',
+ pts:['Cada producto con su precio claro y visible.','Cada oferta con sus condiciones y restricciones a la vista.','El precio de caja coincide con el de la góndola.','Informá las características del producto y no ocultes costos adicionales.'],
+ quiz:[{q:'¿Qué debe coincidir siempre?',o:['El precio de la góndola y el de la caja','El precio de la góndola y el del competidor','El precio de hoy y el de ayer'],a:0,w:'El precio informado es el que se cobra.'},
+ {q:'Anunciás un 50 % de descuento. ¿Qué tenés que hacer?',o:['Informar las condiciones para acceder','Nada: el cartel alcanza','Cambiar el cartel cuando alguien reclame'],a:0,w:'Las condiciones esenciales se informan junto con la oferta.'}]},
+publicidad:{t:'Publicidad que cumple',min:2,law:'Decreto 274/2019, art. 11 · para comerciantes',
+ intro:'Lo que anunciás en el cartel, la vidriera o las redes tiene que ser verdad y poder cumplirse.',
+ pts:['No anuncies descuentos que no aplicás.','Si el precio publicado cambia, no sigas ofreciéndolo.','No digas que un producto tiene características que no tiene.','Revisá tus redes y tu cartelería con el mismo cuidado.'],
+ quiz:[{q:'¿Qué hacés si ya no podés ofrecer el precio publicado en redes?',o:['Retirar o actualizar la publicación','Dejarla y decir que no existe cuando pregunten','Aumentar el precio en caja'],a:0,w:'Una publicación vigente que no se cumple puede ser publicidad engañosa.'}]},
+mercaderia:{t:'Mercadería y seguridad en tu local',min:2,law:'Ley 24.240, art. 5 · para comerciantes',
+ intro:'Un control propio y periódico evita riesgos para tus clientes y problemas para tu comercio.',
+ pts:['Revisá fechas de vencimiento en góndola y en depósito.','Retirá productos en mal estado o con envases deteriorados.','Mantené la higiene del local.','Controlá que los artefactos eléctricos y juguetes que vendés sean seguros.'],
+ quiz:[{q:'La mercadería vencida en el depósito, ¿es un tema de control?',o:['Sí, también se controla el depósito','No, solo importa la góndola','Solo en verano'],a:0,w:'La guía incluye mercaderías vencidas en depósito entre los ejemplos.'}]},
+acta:{t:'Si recibís un acta',min:3,law:'Ley 1480, art. 4 · para comerciantes',
+ intro:'Un inspector puede labrar un acta si constata una posible infracción. Tenés derecho a defenderte.',
+ pts:['Te entregan una copia del acta.','Tenés 5 días hábiles para presentar tu descargo y ofrecer pruebas.','Se te indica dónde debés presentarte.','Podés ofrecer pruebas pertinentes, que se admiten si hay hechos discutidos.','La decisión final la toma la autoridad provincial, no el inspector.'],
+ quiz:[{q:'¿Cuánto tiempo tenés para presentar tu descargo?',o:['5 días hábiles','48 horas','1 año'],a:0,w:'Son 5 días hábiles desde la notificación.'},
+ {q:'¿Quién impone la sanción?',o:['La autoridad provincial de aplicación','El inspector en el momento','Nadie'],a:0,w:'Labrar un acta no equivale a imponer una sanción.'}]},
+municipio:{t:'Qué puede y qué no puede hacer el municipio',min:3,law:'Ley 1480, art. 25 · Decreto 274/2019, art. 27',
+ intro:'El municipio colabora según su convenio con la Subsecretaría. Conocerlo es el primer paso.',
+ pts:['Puede inspeccionar comercios y constatar posibles infracciones.','Puede relevar precios, ofertas y publicidad y verificar condiciones de venta.','Puede labrar actas y remitir las actuaciones a la Subsecretaría.','Puede asesorar, recibir denuncias y educar al consumidor.','Labrar un acta NO equivale a tener competencia para instruir el sumario ni para sancionar.'],
+ quiz:[{q:'¿Un inspector municipal puede imponer una multa por su cuenta?',o:['No: labrar el acta no equivale a sancionar','Sí, siempre','Solo si el comercio está de acuerdo'],a:0,w:'Las sanciones las aplica la autoridad provincial.'},
+ {q:'¿Dónde están las atribuciones concretas del inspector?',o:['En el convenio de su municipio','En cualquier ley','No están definidas'],a:0,w:'Cada inspector debe conocer su convenio.'},
+ {q:'Ante una situación que excede sus atribuciones, el inspector...',o:['Consulta a la autoridad provincial','Resuelve por su cuenta','Ignora el caso'],a:0,w:'Es una de las siete reglas de oro.'}]},
+tres:{t:'Las tres infracciones más frecuentes',min:3,law:'Ley 24.240, arts. 4 y 5 · Decreto 274/2019, art. 11',
+ intro:'Información, seguridad y publicidad: qué controlar y cómo reconocerlas.',
+ pts:['Deber de información: precios visibles, ofertas con condiciones, sin diferencias en caja.','Salud y seguridad: sin vencidos, envases en buen estado, productos seguros.','Publicidad engañosa: descuentos falsos, promociones incompletas, cartelería que induce a error.'],
+ quiz:[{q:'Un cartel de “50 % off” sin condiciones es, en principio, un tema de...',o:['Deber de información','Seguridad eléctrica','Horarios de atención'],a:0,w:'Las ofertas deben indicar correctamente sus condiciones.'},
+ {q:'Mercadería vencida en góndola se encuadra en...',o:['El art. 5 de la Ley 24.240','El art. 11 del Decreto 274/2019','Ninguna norma'],a:0,w:'Protección de la salud y seguridad.'}]},
+redactar:{t:'Cómo redactar los hechos del acta',min:3,law:'Guía práctica · Cap. III',
+ intro:'Describí hechos, no conclusiones. Una descripción concreta protege el derecho de defensa.',
+ pts:['Indicá qué se vio, dónde y cuándo.','Nombrá el producto y la circunstancia concreta.','Identificá la norma presuntamente infringida.','Adjuntá fotografías y documentación.'],
+ quiz:[{q:'¿Cuál es una buena descripción?',o:['“El comercio no informa bien los precios.”','“Se constata que el comercio exhibe en góndola un producto sin indicación visible de su precio de venta.”','“Es un comercio deshonesto.”'],a:1,w:'Describe hechos concretos y verificables.'},
+ {q:'¿Qué más debe llevar el acta?',o:['Fotografías y documentación','Una opinión sobre el dueño','Nada más'],a:0,w:'La prueba acompaña al acta.'}]},
+reglas:{t:'Las siete reglas de oro del inspector',min:2,law:'Guía práctica · Cap. VI',
+ intro:'Una buena inspección es el primer paso para un procedimiento administrativo válido.',
+ pts:['Describir hechos, no formular conclusiones genéricas.','Identificar correctamente la norma aplicable.','Incorporar toda la prueba disponible.','Respetar las formalidades de notificación.','Entregar copia del acta.','Remitir las actuaciones completas.','Consultar a la autoridad provincial ante situaciones que excedan sus atribuciones.'],
+ quiz:[{q:'¿Cuál de estas NO es una regla de oro?',o:['Entregar copia del acta','Imponer la sanción en el acto','Remitir las actuaciones completas'],a:1,w:'La sanción corresponde a la autoridad provincial.'},
+ {q:'Una conclusión genérica como “no cumple la ley” es...',o:['Insuficiente: hay que describir hechos','La mejor forma de redactar','Obligatoria'],a:0,w:'La primera regla es describir hechos.'}]}
+};
+var PROF={
+vecino:{n:'Soy vecino',ic:'V',d:'Conocé tus derechos como consumidor y qué hacer ante un abuso.',caps:['precio','oferta','seguridad','despues']},
+comerciante:{n:'Soy comerciante',ic:'C',d:'Cómo cumplir la ley y qué pasa si recibís un acta.',caps:['exhibir','publicidad','mercaderia','acta','sanciones']},
+municipio:{n:'Soy municipio',ic:'M',d:'Capacitación para inspectores municipales, con un caso para practicar.',caps:['municipio','tres','redactar','despues','sanciones','reglas'],scn:true}
+};
+var STEPS=[
+{k:'Paso 1 · Identificar el comercio',q:'Llegás al almacén. ¿Qué hacés primero?',o:['Te identificás y registrás el nombre comercial y el domicilio','Empezás a sacar fotos sin presentarte','Le pedís al dueño que acomode todo antes'],a:0,w:'El primer paso es identificar el comercio y su domicilio, y presentarte como inspector.'},
+{k:'Paso 2 · Identificar al responsable',q:'Hay un empleado atendiendo. ¿Cómo lo registrás?',o:['Anotás solo “el encargado”','Identificás a la persona presente con sus datos','Esperás a que llegue el dueño aunque haya alguien'],a:1,w:'El acta debe identificar a la persona presente.'},
+{k:'Paso 3 · Observar',q:'Recorrés el local. ¿Qué observás?',o:['Solo la caja','Precios, ofertas y estado de la mercadería','Solo la fachada'],a:1,w:'Observás las condiciones de comercialización: precios, ofertas, publicidad y estado de los productos.'},
+{k:'Paso 4 · Verificar los hechos',q:'Una gaseosa está a $10.000 en la góndola y en la caja se cobra $12.000. ¿Qué hacés?',o:['Suponés que es un error y seguís','Verificás y registrás el hecho concreto','Le pedís que corrija el precio y no anotás nada'],a:1,w:'Verificás los hechos que podrían constituir infracciones: diferencia entre el precio informado y el que se cobra.'},
+{k:'Paso 5 · Documentar',q:'¿Qué elementos reunís?',o:['Fotos del cartel, la góndola y el ticket','Solo tu memoria','Una opinión del vecino de al lado'],a:0,w:'Documentás las irregularidades con fotografías y otros elementos.'},
+{k:'Paso 6 · Identificar la norma',q:'Además hay lácteos vencidos en la heladera, listos para vender. ¿Cómo encuadrás los hechos?',o:['“Infracción a la ley del consumidor”, sin más','Precio distinto: art. 4 de la Ley 24.240. Vencidos: art. 5','Todo es publicidad engañosa'],a:1,w:'Identificás la norma presuntamente vulnerada para cada hecho: art. 4 (información) y art. 5 (salud y seguridad).'},
+{k:'Paso 7 · Labrar el acta',q:'Terminada la inspección, ¿qué hacés?',o:['Labrás el acta y entregás copia al presente','Dejás el acta sin copia y te vas','Imponés una multa en el acto'],a:0,w:'Labrás el acta y entregás copia. La multa la decide la autoridad provincial, no el inspector.'},
+{k:'Redacción del acta',q:'¿Cuál es la mejor descripción de los hechos?',o:['“El comercio engaña a los clientes con los precios.”','“Se constata que el establecimiento exhibe en góndola una gaseosa a $10.000 y en caja se pretende cobrar $12.000, circunstancia que impide al consumidor conocer previamente el valor ofrecido.”','“Comercio con mala atención y precios caros.”'],a:1,w:'Describí hechos concretos, no conclusiones: garantiza el derecho de defensa.'}
+];
+var ACTA=[
+['Fecha y hora',1],['Domicilio del establecimiento',1],['Nombre comercial y datos de identificación',1],['Identificación del inspector',1],['Identificación de la persona presente',1],['Descripción clara y circunstanciada de los hechos',1],['Norma presuntamente infringida',1],['Documentación y fotografías',1],['Constancia de notificación y entrega de copia',1],
+['Opinión del inspector sobre las intenciones del dueño',0],['Monto de la multa que correspondería',0],['Antecedentes personales del dueño',0]
+];
+var app=document.getElementById('app'),nav=document.getElementById('nav');
+var curProf='vecino',doneSet={};
+try{doneSet=JSON.parse(localStorage.getItem('gc-done')||'{}')}catch(e){}
+function saveDone(id){doneSet[id]=1;try{localStorage.setItem('gc-done',JSON.stringify(doneSet))}catch(e){}}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function navHtml(h){return '<a class="chip" href="#inicio"'+(h==='inicio'?' aria-current="true"':'')+'>Inicio</a>'+Object.keys(PROF).map(function(k){return '<a class="chip" href="#'+k+'"'+(h===k?' aria-current="true"':'')+'>'+PROF[k].n.replace('Soy ','')+'</a>'}).join('')}
+function home(){
+  app.innerHTML='<section class="hero"><span class="tag">Defensa del Consumidor · Formosa</span><h1>Conocé tus derechos. Cumplí tus deberes.</h1><p>Cápsulas cortas, preguntas rápidas y casos para practicar. Elegí tu perfil y empezá.</p></section>'+
+  '<div class="grid3">'+Object.keys(PROF).map(function(k){var p=PROF[k];return '<a class="card" href="#'+k+'"><span class="ic">'+p.ic+'</span><h3>'+p.n+'</h3><p>'+p.d+'</p><span class="go">Entrar →</span></a>'}).join('')+'</div>'+
+  '<section class="sec"><h2>Cómo funciona</h2><p>Cada cápsula tiene un video corto (próximamente), los puntos clave y un cuestionario de pocas preguntas. Tu avance queda guardado solo en este navegador.</p></section>';
+}
+function profile(k){
+  curProf=k;var p=PROF[k];
+  app.innerHTML='<a class="back" href="#inicio">← Inicio</a><h2>'+p.n+'</h2><p style="color:var(--muted);margin-top:6px">'+p.d+'</p>'+
+  (p.scn?'<a class="card" href="#escenario" style="margin-top:20px;background:var(--brand);color:var(--on-brand);border-color:var(--brand)"><h3>¿Qué harías vos? Caso de inspección</h3><p style="color:var(--on-brand);opacity:.92">Recorré los siete pasos de una inspección y armá el acta. Un caso con decisiones y devolución en cada paso.</p><span class="go" style="color:var(--on-brand)">Empezar el caso →</span></a>':'')+
+  '<h3 style="margin-top:28px">Cápsulas</h3><div class="caplist">'+p.caps.map(function(id){var c=CAPS[id];return '<a class="card" href="#cap-'+id+'"><div class="meta"><span>'+c.min+' min</span>'+(doneSet[id]?'<span class="done">Completada</span>':'')+'</div><h3>'+c.t+'</h3><p>'+c.intro+'</p><span class="go">Ver cápsula →</span></a>'}).join('')+'</div>';
+}
+function capsule(id){
+  var c=CAPS[id];if(!c){return home()}
+  var list=PROF[curProf].caps,i=list.indexOf(id);
+  app.innerHTML='<a class="back" href="#'+curProf+'">← '+PROF[curProf].n+'</a><h2>'+c.t+'</h2><p style="color:var(--muted);margin-top:8px">'+c.intro+'</p>'+
+  '<div class="video" style="margin-top:20px" role="img" aria-label="Video próximamente"><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><path d="M60 40l10 22 22 10-22 10-10 22-10-22-22-10 22-10z"/><path d="M330 150l8 18 18 8-18 8-8 18-8-18-18-8 18-8z"/><path d="M300 30l6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/></g></svg><div class="in"><span class="play"><i></i></span><b>Video próximamente</b><small>[Cápsula de '+c.min+' min · locución y escenas a grabar]</small></div></div>'+
+  '<ul class="pts">'+c.pts.map(function(t,n){return '<li><span class="n">'+(n+1)+'</span><span>'+t+'</span></li>'}).join('')+'</ul><p class="law">Base: '+c.law+'</p><div class="quiz" id="quiz"></div><div class="row" id="after"></div>';
+  runQuiz(c,id,function(score){
+    var nx=list[i+1];
+    document.getElementById('after').innerHTML=(nx?'<a class="btn" href="#cap-'+nx+'">Siguiente cápsula →</a>':'')+'<a class="btn alt" href="#'+curProf+'">Volver a las cápsulas</a>'+(PROF[curProf].scn&&!nx?'<a class="btn" href="#escenario">Probá el caso de inspección</a>':'');
+  });
+}
+function runQuiz(c,id,fin){
+  var box=document.getElementById('quiz'),i=0,score=0;
+  function show(){
+    var q=c.quiz[i];
+    box.innerHTML='<div class="meta"><b>Cuestionario rápido</b><span>Pregunta '+(i+1)+' de '+c.quiz.length+'</span></div><div class="prog"><i style="width:'+(i/c.quiz.length*100)+'%"></i></div><h3 style="font-family:var(--font-body);font-size:1.15rem;font-weight:700;line-height:1.35">'+q.q+'</h3><div class="opts">'+q.o.map(function(t,n){return '<button class="opt" data-n="'+n+'">'+t+'</button>'}).join('')+'</div><div id="fb" aria-live="polite"></div>';
+    box.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
+      var n=+b.dataset.n,ok=n===q.a;if(ok)score++;
+      box.querySelectorAll('.opt').forEach(function(x){x.disabled=true;if(+x.dataset.n===q.a)x.classList.add('ok')});
+      if(!ok)b.classList.add('bad');
+      var last=i===c.quiz.length-1;
+      document.getElementById('fb').innerHTML='<div class="fb"><b>'+(ok?'Correcto. ':'No es esa. ')+'</b>'+q.w+'</div><div class="row"><button class="btn" id="nx">'+(last?'Ver resultado':'Siguiente')+'</button></div>';
+      document.getElementById('nx').focus();
+      document.getElementById('nx').onclick=function(){i++;if(i<c.quiz.length)show();else end()};
+    }});
+  }
+  function end(){
+    saveDone(id);
+    box.innerHTML='<div class="meta"><b>Resultado</b></div><div class="score">'+score+' / '+c.quiz.length+'</div><p>'+(score===c.quiz.length?'Muy bien: tenés claro este tema.':'Repasá los puntos clave de arriba y volvé a intentarlo cuando quieras.')+'</p><div class="row"><button class="btn alt" id="rt">Repetir cuestionario</button></div>';
+    document.getElementById('rt').onclick=function(){i=0;score=0;show()};
+    fin(score);
+  }
+  show();
+}
+function scenario(){
+  curProf='municipio';
+  var i=0,score=0,total=STEPS.length+1;
+  function head(){return '<a class="back" href="#municipio">← Municipio</a><div class="meta"><b>¿Qué harías vos?</b><span>Paso '+Math.min(i+1,total)+' de '+total+'</span></div><div class="prog"><i style="width:'+(i/total*100)+'%"></i></div>'}
+  function step(){
+    if(i>=STEPS.length)return acta();
+    var s=STEPS[i];
+    app.innerHTML=head()+'<div class="scn" style="margin-top:16px">'+(i===0?'<div class="story"><b>La situación.</b> Sos inspector municipal y tu municipio tiene convenio con la Subsecretaría. Hoy inspeccionás el almacén “El Sol”. [Caso de ejemplo para práctica]</div>':'')+'<span class="tag" style="color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.8rem">'+s.k+'</span><h2 style="font-size:1.6rem">'+s.q+'</h2><div class="opts" id="o">'+s.o.map(function(t,n){return '<button class="opt" data-n="'+n+'">'+t+'</button>'}).join('')+'</div><div id="fb" aria-live="polite"></div></div>';
+    var tries=0;
+    app.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
+      var n=+b.dataset.n,ok=n===s.a;
+      if(ok){if(tries===0)score++;app.querySelectorAll('.opt').forEach(function(x){x.disabled=true;if(+x.dataset.n===s.a)x.classList.add('ok')});
+        document.getElementById('fb').innerHTML='<div class="fb"><b>Correcto. </b>'+s.w+'</div><div class="row"><button class="btn" id="nx">Continuar</button></div>';
+        document.getElementById('nx').focus();document.getElementById('nx').onclick=function(){i++;step();window.scrollTo(0,0)};
+      }else{tries++;b.disabled=true;b.classList.add('bad');document.getElementById('fb').innerHTML='<div class="fb">Esa no es la mejor opción. Probá con otra.</div>'}
+    }});
+  }
+  function acta(){
+    app.innerHTML=head()+'<div class="scn" style="margin-top:16px"><span class="tag" style="color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.8rem">Armá el acta</span><h2 style="font-size:1.6rem">Marcá los 9 datos que el acta debe contener</h2><p style="color:var(--muted)">Hay 12 opciones. Tres no corresponden.</p><div class="checks" id="ch">'+ACTA.map(function(a,n){return '<label class="chk"><input type="checkbox" data-n="'+n+'"><span>'+a[0]+'</span></label>'}).join('')+'</div><div class="row"><button class="btn" id="vf">Verificar</button></div><div id="fb" aria-live="polite"></div></div>';
+    document.getElementById('vf').onclick=function(){
+      var good=0,wrong=0;
+      app.querySelectorAll('.chk').forEach(function(l){var inp=l.querySelector('input'),r=ACTA[+inp.dataset.n][1];inp.disabled=true;
+        if(r&&inp.checked){good++;l.classList.add('ok')}else if(!r&&inp.checked){wrong++;l.classList.add('bad')}else if(r&&!inp.checked){l.classList.add('bad')}});
+      document.getElementById('vf').disabled=true;
+      if(good===9&&wrong===0)score++;
+      document.getElementById('fb').innerHTML='<div class="fb"><b>Marcaste '+good+' de 9 datos correctos'+(wrong?' y '+wrong+' que no corresponden':'')+'.</b> Los datos faltantes quedaron resaltados en rojo. La opinión sobre las intenciones, el monto de la multa y los antecedentes personales no van en el acta: se describen hechos y la sanción la decide la autoridad provincial.</div><div class="row"><button class="btn" id="fin">Ver resultado</button></div>';
+      document.getElementById('fin').onclick=function(){i=total;fin()};
+    };
+  }
+  function fin(){
+    app.innerHTML='<a class="back" href="#municipio">← Municipio</a><h2>Caso terminado</h2><div class="card" style="margin-top:18px"><div class="score">'+score+' / '+total+'</div><p>Pasos resueltos a la primera. '+(score>=total-1?'Muy buen trabajo: tu inspección sería sólida.':'Repasá las cápsulas de redacción del acta y las reglas de oro, y volvé a probar.')+'</p></div><div class="row"><button class="btn" id="rs">Repetir el caso</button><a class="btn alt" href="#cap-reglas">Ver las siete reglas de oro</a></div>';
+    document.getElementById('rs').onclick=function(){i=0;score=0;step()};
+  }
+  step();
+}
+function route(){
+  var h=(location.hash||'#inicio').slice(1);
+  nav.innerHTML=navHtml(h in PROF?h:(h==='escenario'?'municipio':(h==='inicio'?h:curProf)));
+  if(h in PROF)profile(h);else if(h==='escenario')scenario();else if(h.indexOf('cap-')===0)capsule(h.slice(4));else home();
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+</script>
