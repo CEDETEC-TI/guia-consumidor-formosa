@@ -1,5 +1,16 @@
-<title>Guía del Consumidor Formosa</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Guía del Consumidor Formosa · Subsecretaría de Defensa del Consumidor</title>
+<meta name="description" content="Guía interactiva para vecinos, comerciantes y municipios de Formosa: derechos del consumidor, cómo cumplir la ley y qué hacer ante una infracción.">
+<meta name="theme-color" content="#003B73">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Guía del Consumidor Formosa">
+<meta property="og:description" content="Conocé tus derechos. Cumplí tus deberes. Cápsulas cortas, preguntas rápidas y casos para practicar.">
+<link rel="icon" id="fav" href="data:,">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
 /* Concepto: sitio institucional liviano, blanco y azul del logo de la Subsecretaría; cabecera con logo, contenido en tarjetas simples, pie con CEDETEC en texto */
@@ -91,18 +102,78 @@ footer .by small{font-size:.8rem;color:var(--muted)}
 footer .brand{font-family:var(--font-body);font-weight:800;font-size:1rem;letter-spacing:4px;color:var(--ink)}
 .back{display:inline-block;margin-bottom:16px;font-weight:700}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- Refinamiento profesional ---- */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;align-items:stretch}
+body>.wrap{width:100%;flex:1;display:flex;flex-direction:column}
+main{flex:1}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px;z-index:50}
+.skip:focus{left:8px}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);margin-inline:-16px;padding-inline:16px}
+header.top img{box-shadow:0 1px 3px rgba(0,43,92,.25)}
+.chip{transition:background .15s,border-color .15s,color .15s}
+.chip:hover{border-color:var(--brand-2)}
+.hero{position:relative;overflow:hidden;box-shadow:0 12px 32px -16px rgba(0,59,115,.55);padding-block:clamp(32px,6vw,56px)}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;opacity:.92}
+.hero .tag::before{content:"";width:28px;height:2px;background:currentColor}
+.hero .row{margin-top:8px}
+.hero .btn{background:#fff;color:var(--brand)}
+.hero .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.stats div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-align:center}
+.stats b{display:block;font-family:var(--font-display);font-size:2rem;line-height:1;color:var(--accent)}
+.stats span{font-size:.85rem;color:var(--muted)}
+.card{transition:border-color .15s,transform .15s,box-shadow .15s}
+a.card:hover,button.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(0,59,115,.5)}
+.card .ic{box-shadow:0 4px 10px -4px rgba(0,59,115,.6)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700}
+.steps li p{color:var(--muted);font-size:.95rem}
+.notice{margin-top:28px;border-left:4px solid var(--brand-2);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 18px;font-size:.92rem;color:var(--muted)}
+.pbar{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:.9rem;color:var(--muted);font-weight:600}
+.pbar .prog{flex:1;max-width:320px}
+.btn{transition:filter .15s,transform .1s}
+.btn:hover{filter:brightness(1.12)}
+.btn:active{transform:scale(.98)}
+.opt{transition:border-color .15s,background .15s;width:100%;min-height:48px}
+.quiz{background:var(--bg)}
+.video{box-shadow:0 10px 28px -16px rgba(0,59,115,.6)}
+.pts li{line-height:1.5}
+footer{margin-top:24px;flex-direction:column;align-items:flex-start;gap:10px}
+footer .row2{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;width:100%}
+footer p{max-width:70ch}
+@media (max-width:560px){
+  body{font-size:16px}
+  header.top .t b{font-size:1.15rem}
+  header.top .crumbs{width:100%;order:3}
+  .chip{padding:7px 12px}
+  .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}.stats div{padding:10px 6px}.stats b{font-size:1.6rem}
+  .hero .btn{flex:1;text-align:center}
+}
+@media print{header.top,.crumbs,.row,.skip{display:none}.hero{color:#000;background:none;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transform:none!important}}
 </style>
 
+</head>
+<body>
+<a class="skip" href="#app">Ir al contenido</a>
 <div class="wrap">
 <header class="top">
   <img src="data:image/jpeg;base64,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" alt="Logo de la Subsecretaría de Defensa del Consumidor y Usuario">
   <div class="t"><b>Subsecretaría de Defensa del Consumidor y Usuario</b><span>Provincia de Formosa · Guía interactiva (versión de prueba)</span></div>
   <nav class="crumbs" id="nav" aria-label="Perfiles"></nav>
 </header>
-<main id="app"></main>
+<main id="app" tabindex="-1"></main>
 <footer>
-  <span>Contenido basado en la Guía práctica de inspección y procedimiento administrativo. Versión de prueba.</span>
-  <span class="by"><small>Desarrollado por</small><span class="brand">CEDETEC</span></span>
+  <p><b style="color:var(--ink)">Subsecretaría de Defensa del Consumidor y Usuario · Provincia de Formosa</b></p>
+  <div class="row2">
+    <span>Contenido basado en la Guía práctica de inspección y procedimiento administrativo. Material informativo y educativo: no reemplaza el asesoramiento legal ni las resoluciones de la autoridad de aplicación.</span>
+    <span class="by"><small>Desarrollado por</small><span class="brand">CEDETEC</span></span>
+  </div>
 </footer>
 </div>
 
@@ -201,15 +272,19 @@ function saveDone(id){doneSet[id]=1;try{localStorage.setItem('gc-done',JSON.stri
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function navHtml(h){return '<a class="chip" href="#inicio"'+(h==='inicio'?' aria-current="true"':'')+'>Inicio</a>'+Object.keys(PROF).map(function(k){return '<a class="chip" href="#'+k+'"'+(h===k?' aria-current="true"':'')+'>'+PROF[k].n.replace('Soy ','')+'</a>'}).join('')}
 function home(){
-  app.innerHTML='<section class="hero"><span class="tag">Defensa del Consumidor · Formosa</span><h1>Conocé tus derechos. Cumplí tus deberes.</h1><p>Cápsulas cortas, preguntas rápidas y casos para practicar. Elegí tu perfil y empezá.</p></section>'+
-  '<div class="grid3">'+Object.keys(PROF).map(function(k){var p=PROF[k];return '<a class="card" href="#'+k+'"><span class="ic">'+p.ic+'</span><h3>'+p.n+'</h3><p>'+p.d+'</p><span class="go">Entrar →</span></a>'}).join('')+'</div>'+
-  '<section class="sec"><h2>Cómo funciona</h2><p>Cada cápsula tiene un video corto (próximamente), los puntos clave y un cuestionario de pocas preguntas. Tu avance queda guardado solo en este navegador.</p></section>';
+  var nc=Object.keys(CAPS).length,nq=Object.keys(CAPS).reduce(function(t,k){return t+CAPS[k].quiz.length},0);
+  app.innerHTML='<section class="hero"><span class="tag">Defensa del Consumidor · Formosa</span><h1>Conocé tus derechos.<br>Cumplí tus deberes.</h1><p>Cápsulas cortas, preguntas rápidas y casos para practicar. Elegí tu perfil y empezá en minutos.</p><div class="row"><a class="btn" href="#vecino">Soy vecino</a><a class="btn alt" href="#comerciante">Soy comerciante</a><a class="btn alt" href="#municipio">Soy municipio</a></div></section>'+
+  '<div class="stats"><div><b>'+nc+'</b><span>cápsulas</span></div><div><b>'+nq+'</b><span>preguntas de práctica</span></div><div><b>2–3</b><span>minutos cada una</span></div></div>'+
+  '<section class="sec"><h2>Elegí tu perfil</h2><p>El contenido está pensado según tu rol.</p></section>'+
+  '<div class="grid3" style="margin-top:16px">'+Object.keys(PROF).map(function(k){var p=PROF[k];return '<a class="card" href="#'+k+'"><span class="ic" aria-hidden="true">'+p.ic+'</span><h3>'+p.n+'</h3><p>'+p.d+'</p><span class="go">Entrar →</span></a>'}).join('')+'</div>'+
+  '<section class="sec"><h2>Cómo funciona</h2><ol class="steps"><li><b>Mirá la cápsula</b><p>Un video corto (próximamente) y los puntos clave del tema.</p></li><li><b>Respondé el cuestionario</b><p>Pocas preguntas, con explicación en cada respuesta.</p></li><li><b>Practicá con casos</b><p>Los inspectores municipales pueden recorrer una inspección paso a paso.</p></li></ol></section>'+
+  '<p class="notice">Tu avance se guarda únicamente en este navegador. No se recopilan datos personales.</p>';
 }
 function profile(k){
   curProf=k;var p=PROF[k];
   app.innerHTML='<a class="back" href="#inicio">← Inicio</a><h2>'+p.n+'</h2><p style="color:var(--muted);margin-top:6px">'+p.d+'</p>'+
   (p.scn?'<a class="card" href="#escenario" style="margin-top:20px;background:var(--brand);color:var(--on-brand);border-color:var(--brand)"><h3>¿Qué harías vos? Caso de inspección</h3><p style="color:var(--on-brand);opacity:.92">Recorré los siete pasos de una inspección y armá el acta. Un caso con decisiones y devolución en cada paso.</p><span class="go" style="color:var(--on-brand)">Empezar el caso →</span></a>':'')+
-  '<h3 style="margin-top:28px">Cápsulas</h3><div class="caplist">'+p.caps.map(function(id){var c=CAPS[id];return '<a class="card" href="#cap-'+id+'"><div class="meta"><span>'+c.min+' min</span>'+(doneSet[id]?'<span class="done">Completada</span>':'')+'</div><h3>'+c.t+'</h3><p>'+c.intro+'</p><span class="go">Ver cápsula →</span></a>'}).join('')+'</div>';
+  '<div class="pbar"><span>'+p.caps.filter(function(x){return doneSet[x]}).length+' de '+p.caps.length+' completadas</span><div class="prog"><i style="width:'+(p.caps.filter(function(x){return doneSet[x]}).length/p.caps.length*100)+'%"></i></div></div><h3 style="margin-top:24px">Cápsulas</h3><div class="caplist">'+p.caps.map(function(id){var c=CAPS[id];return '<a class="card" href="#cap-'+id+'"><div class="meta"><span>'+c.min+' min</span>'+(doneSet[id]?'<span class="done">Completada</span>':'')+'</div><h3>'+c.t+'</h3><p>'+c.intro+'</p><span class="go">Ver cápsula →</span></a>'}).join('')+'</div>';
 }
 function capsule(id){
   var c=CAPS[id];if(!c){return home()}
@@ -284,7 +359,12 @@ function route(){
   var h=(location.hash||'#inicio').slice(1);
   nav.innerHTML=navHtml(h in PROF?h:(h==='escenario'?'municipio':(h==='inicio'?h:curProf)));
   if(h in PROF)profile(h);else if(h==='escenario')scenario();else if(h.indexOf('cap-')===0)capsule(h.slice(4));else home();
+  var T='Guía del Consumidor Formosa';
+  document.title=(h in PROF?PROF[h].n+' · ':h==='escenario'?'Caso de inspección · ':(CAPS[h.slice(4)]&&h.indexOf('cap-')===0)?CAPS[h.slice(4)].t+' · ':'')+T;
   window.scrollTo(0,0);
 }
+document.getElementById('fav').href=document.querySelector('header.top img').src;
 window.addEventListener('hashchange',route);route();
 </script>
+</body>
+</html>
